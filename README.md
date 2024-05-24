@@ -1,7 +1,70 @@
-# Tauri + Vanilla
+# exper-tauri-app
 
-This template should help get you started developing with Tauri in vanilla HTML, CSS and Javascript.
+The crate was created [following these instructions](https://tauri.app/v1/guides/getting-started/setup/).
+To setup the prerequisites [follow these instructions](https://tauri.app/v1/guides/getting-started/prerequisites)
+in particular the [linux prerequisites](https://tauri.app/v1/guides/getting-started/prerequisites#setting-up-linux).
 
+In my case I'm currently using `cargo` so you should install
+create-tauri-app with `cargo install create-tauri-app --locked`
+as suggested [by Quick Start and clicking the Cargo](https://tauri.app/v1/guides/getting-started/setup/).
+
+To a project you can use the command line use `-h` to get help:
+```bash
+wink@3900x 24-05-24T22:40:39.478Z:~/prgs/rust/tauri
+$ cargo create-tauri-app -h
+
+cargo create-tauri-app 3.14.0
+Tauri Programme within The Commons Conservancy
+Rapidly scaffold out a new tauri app project.
+
+USAGE:
+  cargo create-tauri-app [OPTIONS] [PROJECTNAME]
+
+ARGS:
+  <PROJECTNAME>                 Specify project name which is used for the directory, package.json and Cargo.toml
+
+OPTIONS:
+  -m, --manager <MANAGER>       Specify preferred package manager [cargo, pnpm, yarn, npm, bun, dotnet]
+  -t, --template <TEMPLATE>     Specify the UI template to use [vanilla, vanilla-ts, vue, vue-ts, svelte, svelte-ts, react, react-ts, solid, solid-ts, yew, leptos, sycamore, angular, preact, preact-ts, blazor]
+  -y, --yes                     Skip prompts and use defaults where applicable
+  -f, --force                   Force create the directory even if it is not empty.
+                    --beta                    Bootstraps a project using tauri@2.0-beta
+                    --mobile                  Bootstraps a mobile project too. Only availabe with `--beta` option.
+                    --no-mobile               Skip bootstraping a mobile project. Only availabe with `--beta` option.
+  -h, --help                    Prints help information
+  -v, --version                 Prints version information
+
+wink@3900x 24-05-24T22:43:09.759Z:~/prgs/rust/tauri
+```
+
+Then something like:
+```bash
+wink@3900x 24-05-24T22:44:20.295Z:~/prgs/rust/tauri
+$ cargo create-tauri-app -m cargo -t vanilla exper-tauri-app
+
+Template created! To get started run:
+  cd exper-tauri-app
+  cargo tauri dev
+
+wink@3900x 24-05-24T22:44:25.223Z:~/prgs/rust/tauri
+```
+
+If you run `cargo create-tauri-app` without any arguments you'll
+be prompted for parameters. The equivalent of the above command
+would be:
+```bash
+wink@3900x 24-05-24T22:49:19.400Z:~/prgs/rust/tauri
+$ cargo create-tauri-app
+✔ Project name · exper-tauri-app
+✔ Choose which language to use for your frontend · Rust - (cargo)
+✔ Choose your UI template · Vanilla
+
+Template created! To get started run:
+  cd exper-tauri-app
+  cargo tauri dev
+
+wink@3900x 24-05-24T22:49:39.478Z:~/prgs/rust/tauri
+```
 
 ## Recommended IDE Setup
 
